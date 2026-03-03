@@ -5,7 +5,6 @@ import { Facebook, Instagram, Linkedin, Music, ChevronLeft, ChevronRight } from 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
- 
   const partners = [
     { id: 1, logo: 'kara5.png', name: 'Partner 1' },
     { id: 2, logo: 'kara2.png', name: 'Partner 2' },
@@ -76,9 +75,14 @@ const Footer = () => {
                     src={partner.logo} 
                     alt={partner.name}
                     className="max-w-full max-h-full object-contain"
-                    onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
+                    onError={(e) => { 
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none'; 
+                      const sibling = target.nextSibling as HTMLElement;
+                      if (sibling) sibling.style.display = 'block';
+                    }}
                   />
-                  {/* Fallback placeholder  */}
+                  {/* Fallback placeholder */}
                   <div className="hidden w-16 h-8 bg-white/20 rounded"></div>
                 </div>
               ))}
