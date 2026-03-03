@@ -47,7 +47,7 @@ const Hero = () => {
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+            index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
         >
           {/* Background Image */}
@@ -55,49 +55,48 @@ const Hero = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
+            *
             <div className="absolute inset-0 bg-gradient-to-r from-kara-dark/80 via-kara-dark/50 to-transparent"></div>
           </div>
 
           {/* Content */}
-          <div className="relative h-full flex items-center">
-            <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-              <div className="max-w-2xl animate-fade-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight">
-                  {slide.title}
-                </h1>
-                <p className="text-lg md:text-xl text-white/80 mb-8">
-                  {slide.subtitle}
-                </p>
-                <a
-                  href="#about"
-                  className="inline-flex items-center px-6 py-3 bg-kara-brown text-white font-medium rounded-lg hover:bg-kara-brown/90 transition-colors duration-300"
-                >
-                  Learn More
-                </a>
-              </div>
+          <div className="relative h-full flex items-center justify-center px-4">
+            <div className="w-full max-w-4xl text-center animate-fade-in">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                {slide.title}
+              </h1>
+              <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                {slide.subtitle}
+              </p>
+              <a
+                href="#about"
+                className="inline-flex items-center px-6 py-3 bg-kara-brown text-white font-medium rounded-lg hover:bg-kara-brown/90 transition-colors duration-300"
+              >
+                Learn More
+              </a>
             </div>
           </div>
         </div>
       ))}
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows*/}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-white/20 transition-all duration-300"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-white/20 transition-all duration-300"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-white/20 transition-all duration-300"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-white/20 transition-all duration-300"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
+      {/* Dots Indicator*/}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}

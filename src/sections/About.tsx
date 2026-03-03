@@ -27,6 +27,10 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-kara-dark mb-4">
             About KARA INCORPORATION
           </h2>
+          <div className='flex flex-col md:flex-row items-center justify-center gap-6 py-4 w-full'>
+          <img src='/karapic9.png' alt='logo' className='w-full max-w-[350px] object-cover' />
+<img src='/karapic3.jpg' alt='logo' className='w-full max-w-[350px] object-cover rounded-full' />
+          </div>
           <p className="text-lg text-kara-brown font-medium">
             How we help you?
           </p>

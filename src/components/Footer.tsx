@@ -1,8 +1,34 @@
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Music } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Music, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
+ 
+  const partners = [
+    { id: 1, logo: 'kara5.png', name: 'Partner 1' },
+    { id: 2, logo: 'kara2.png', name: 'Partner 2' },
+    { id: 3, logo: 'karapic8.png', name: 'Partner 3' },
+    { id: 4, logo: 'karapic6.png', name: 'Partner 4' },
+    { id: 5, logo: 'karapic7.png', name: 'Partner 5' },
+    { id: 6, logo: 'kara3.png', name: 'Partner 6' },
+  ];
+
+  const [currentPartner, setCurrentPartner] = useState(0);
+
+  const nextPartner = useCallback(() => {
+    setCurrentPartner((prev) => (prev + 1) % partners.length);
+  }, [partners.length]);
+
+  const prevPartner = useCallback(() => {
+    setCurrentPartner((prev) => (prev - 1 + partners.length) % partners.length);
+  }, [partners.length]);
+
+  useEffect(() => {
+    const timer = setInterval(nextPartner, 3000);
+    return () => clearInterval(timer);
+  }, [nextPartner]);
 
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/606422895883152', label: 'Facebook' },
@@ -25,11 +51,47 @@ const Footer = () => {
           <h3 className="text-center text-lg font-medium text-kara-tan mb-6">
             Our Partners
           </h3>
-          <div className="flex justify-center items-center space-x-8 opacity-50">
-            {/* Partner placeholders - can be replaced with actual partner logos */}
-            <div className="w-16 h-8 bg-white/20 rounded"></div>
-            <div className="w-16 h-8 bg-white/20 rounded"></div>
-            <div className="w-16 h-8 bg-white/20 rounded"></div>
+          <div className="flex justify-center items-center space-x-6">
+            {/* Back Button */}
+            <button 
+              onClick={prevPartner}
+              className="opacity-50 hover:opacity-100 hover:text-kara-tan transition-all"
+              aria-label="Previous partner"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            {/* Partner Carousel */}
+            <div className="relative w-32 h-12 overflow-hidden">
+              {partners.map((partner, index) => (
+                <div
+                  key={partner.id}
+                  className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out ${
+                    index === currentPartner 
+                      ? 'opacity-100 scale-100 translate-x-0' 
+                      : 'opacity-0 scale-90 translate-x-8'
+                  }`}
+                >
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain"
+                    onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
+                  />
+                  {/* Fallback placeholder  */}
+                  <div className="hidden w-16 h-8 bg-white/20 rounded"></div>
+                </div>
+              ))}
+            </div>
+
+            {/* Forward Button */}
+            <button 
+              onClick={nextPartner}
+              className="opacity-50 hover:opacity-100 hover:text-kara-tan transition-all"
+              aria-label="Next partner"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
           </div>
         </div>
       </div>

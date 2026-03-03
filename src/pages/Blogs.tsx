@@ -56,7 +56,7 @@ const Blogs = () => {
   const blogPosts = [
     {
       title: 'I tried the HONOR Magic V6 — now Samsung and Google foldables feel ancient',
-      excerpt: 'What makes a great foldable Android phone? For me, it\'s one that checks a few different boxes...',
+      excerpt: "What makes a great foldable Android phone? For me, it's one that checks a few different boxes...",
       date: '1 March 2026',
       image: 'https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=600&h=400&fit=crop',
       link: 'https://www.androidauthority.com/honor-magic-v6-review-3637543/',
@@ -70,7 +70,7 @@ const Blogs = () => {
     },
     {
       title: 'Fewer cameras can be better, and this phone proves it',
-      excerpt: 'I can\'t get enough of new camera technology, so I was eager to try out the new Xiaomi...',
+      excerpt: "I can't get enough of new camera technology, so I was eager to try out the new Xiaomi...",
       date: '1 March 2026',
       image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=400&fit=crop',
       link: 'https://www.androidauthority.com/xiaomi-17-ultra-zoom-camera-3637543/',
@@ -84,14 +84,14 @@ const Blogs = () => {
     },
     {
       title: 'This Google TV projector is the nightstand accessory I didn\'t know I needed',
-      excerpt: 'The scariest part of watching horror movies isn\'t on screen, it\'s the walk around my bed afterward...',
+      excerpt: "The scariest part of watching horror movies isn't on screen, it's the walk around my bed afterward...",
       date: '1 March 2026',
       image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop',
       link: 'https://www.androidauthority.com/benq-gv32-review-3644032/',
     },
     {
       title: 'I love Spotify, but its Android app still gets one thing wrong',
-      excerpt: 'Judging by the sentiment shared by my colleagues, I\'m probably the only person...',
+      excerpt: "Judging by the sentiment shared by my colleagues, I'm probably the only person...",
       date: '1 March 2026',
       image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=600&h=400&fit=crop',
       link: 'https://www.androidauthority.com/spotify-shortcuts-gestures-android-3644492/',
@@ -102,21 +102,21 @@ const Blogs = () => {
     <div className="pt-24 md:pt-28 pb-20 bg-kara-light min-h-screen">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-kara-dark mb-4">
+        <div className="text-center mb-10 md:mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-kara-dark mb-4 px-2">
             Blogs and Edu. Resources
           </h1>
-          <p className="text-lg text-kara-dark/70 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-kara-dark/70 max-w-2xl mx-auto px-4">
             Expand your knowledge with our curated collection of resources, past questions, and tech insights.
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white rounded-full p-1 shadow-soft">
+        {/*  mobile scrolling */}
+        <div className="flex justify-center mb-8 md:mb-12 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="inline-flex bg-white rounded-full p-1 shadow-soft whitespace-nowrap">
             <button
               onClick={() => setActiveTab('pdfs')}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 md:px-6 py-2.5 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeTab === 'pdfs'
                   ? 'bg-kara-brown text-white'
                   : 'text-kara-dark/70 hover:text-kara-dark'
@@ -129,7 +129,7 @@ const Blogs = () => {
             </button>
             <button
               onClick={() => setActiveTab('pqs')}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 md:px-6 py-2.5 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeTab === 'pqs'
                   ? 'bg-kara-brown text-white'
                   : 'text-kara-dark/70 hover:text-kara-dark'
@@ -142,7 +142,7 @@ const Blogs = () => {
             </button>
             <button
               onClick={() => setActiveTab('blogs')}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 md:px-6 py-2.5 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeTab === 'blogs'
                   ? 'bg-kara-brown text-white'
                   : 'text-kara-dark/70 hover:text-kara-dark'
@@ -159,41 +159,41 @@ const Blogs = () => {
         {/* PDF Resources */}
         {activeTab === 'pdfs' && (
           <div className="animate-fade-in">
-            <div className="bg-kara-brown rounded-2xl p-8 md:p-10 mb-8 text-center">
-              <BookOpen className="w-12 h-12 text-kara-tan mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <div className="bg-kara-brown rounded-2xl p-6 md:p-10 mb-8 text-center mx-2 md:mx-0">
+              <BookOpen className="w-10 h-10 md:w-12 md:h-12 text-kara-tan mx-auto mb-4" />
+              <h2 className="text-xl md:text-3xl font-bold text-white mb-4">
                 PDF RESOURCES
               </h2>
-              <p className="text-white/80 text-lg italic">
+              <p className="text-white/80 text-base md:text-lg italic px-2">
                 "...In a generation full of mediocre's just a little reading would set you apart" ✨🤎
               </p>
               <p className="text-kara-tan mt-2">~Kara</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {pdfResources.map((resource, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-soft hover:shadow-lg transition-all duration-300 group"
+                  className="bg-white rounded-xl p-5 md:p-6 shadow-soft hover:shadow-lg transition-all duration-300 group"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-kara-brown/10 flex items-center justify-center">
-                      <FileText className="w-6 h-6 text-kara-brown" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-kara-brown/10 flex items-center justify-center">
+                      <FileText className="w-5 h-5 md:w-6 md:h-6 text-kara-brown" />
                     </div>
-                    <span className="text-xs font-medium text-kara-dark/50 uppercase">
+                    <span className="text-[10px] md:text-xs font-medium text-kara-dark/50 uppercase">
                       {resource.type}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-kara-dark mb-1">
+                  <h3 className="text-base md:text-lg font-semibold text-kara-dark mb-1">
                     {resource.title}
                   </h3>
-                  <p className="text-sm text-kara-dark/60 mb-2">by {resource.author}</p>
-                  <p className="text-sm text-kara-dark/70 mb-4">
+                  <p className="text-xs md:text-sm text-kara-dark/60 mb-2">by {resource.author}</p>
+                  <p className="text-xs md:text-sm text-kara-dark/70 mb-4 line-clamp-2">
                     {resource.description}
                   </p>
                   <Button
                     variant="outline"
-                    className="w-full border-kara-brown text-kara-brown hover:bg-kara-brown hover:text-white"
+                    className="w-full border-kara-brown text-kara-brown hover:bg-kara-brown hover:text-white text-xs md:text-sm"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download
@@ -207,40 +207,40 @@ const Blogs = () => {
         {/* KARA PQs */}
         {activeTab === 'pqs' && (
           <div className="animate-fade-in">
-            <div className="bg-kara-tan rounded-2xl p-8 md:p-10 mb-8 text-center">
-              <FileText className="w-12 h-12 text-kara-dark mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl font-bold text-kara-dark mb-4">
+            <div className="bg-kara-tan rounded-2xl p-6 md:p-10 mb-8 text-center mx-2 md:mx-0">
+              <FileText className="w-10 h-10 md:w-12 md:h-12 text-kara-dark mx-auto mb-4" />
+              <h2 className="text-xl md:text-3xl font-bold text-kara-dark mb-4">
                 KARA PQs
               </h2>
-              <p className="text-kara-dark/80 text-lg">
+              <p className="text-kara-dark/80 text-base md:text-lg px-2">
                 Tests and exams are going to be a breeze with our meticulously sorted Academic resources
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {pqResources.map((resource, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-soft hover:shadow-lg transition-all duration-300"
+                  className="bg-white rounded-xl p-5 md:p-6 shadow-soft hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-kara-tan/20 flex items-center justify-center">
-                      <FileText className="w-6 h-6 text-kara-tan" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-kara-tan/20 flex items-center justify-center">
+                      <FileText className="w-5 h-5 md:w-6 md:h-6 text-kara-tan" />
                     </div>
-                    <span className="text-xs font-medium text-kara-dark/50 uppercase">
+                    <span className="text-[10px] md:text-xs font-medium text-kara-dark/50 uppercase">
                       {resource.type}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-kara-dark mb-1">
+                  <h3 className="text-base md:text-lg font-semibold text-kara-dark mb-1">
                     {resource.title}
                   </h3>
-                  <p className="text-sm text-kara-dark/60 mb-2">{resource.course}</p>
-                  <p className="text-sm text-kara-dark/70 mb-4">
+                  <p className="text-xs md:text-sm text-kara-dark/60 mb-2">{resource.course}</p>
+                  <p className="text-xs md:text-sm text-kara-dark/70 mb-4">
                     {resource.description}
                   </p>
                   <Button
                     variant="outline"
-                    className="w-full border-kara-tan text-kara-tan hover:bg-kara-tan hover:text-kara-dark"
+                    className="w-full border-kara-tan text-kara-tan hover:bg-kara-tan hover:text-kara-dark text-xs md:text-sm"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download
@@ -254,7 +254,7 @@ const Blogs = () => {
         {/* Blog Posts */}
         {activeTab === 'blogs' && (
           <div className="animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {blogPosts.map((post, index) => (
                 <a
                   key={index}
@@ -263,28 +263,28 @@ const Blogs = () => {
                   rel="noopener noreferrer"
                   className="bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 md:h-48 overflow-hidden">
                     <img
                       src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-kara-dark/60 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <span className="inline-flex items-center gap-1 text-xs text-white/80">
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <span className="inline-flex items-center gap-1 text-[10px] md:text-xs text-white/80">
                         <Calendar className="w-3 h-3" />
                         {post.date}
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-kara-dark mb-3 line-clamp-2 group-hover:text-kara-brown transition-colors">
+                  <div className="p-5 md:p-6">
+                    <h3 className="text-base md:text-lg font-semibold text-kara-dark mb-2 md:mb-3 line-clamp-2 group-hover:text-kara-brown transition-colors">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-kara-dark/70 mb-4 line-clamp-2">
+                    <p className="text-xs md:text-sm text-kara-dark/70 mb-4 line-clamp-2">
                       {post.excerpt}
                     </p>
-                    <span className="inline-flex items-center text-sm font-medium text-kara-brown group-hover:underline">
+                    <span className="inline-flex items-center text-xs md:text-sm font-medium text-kara-brown group-hover:underline">
                       Continue Reading
                       <ExternalLink className="w-4 h-4 ml-1" />
                     </span>

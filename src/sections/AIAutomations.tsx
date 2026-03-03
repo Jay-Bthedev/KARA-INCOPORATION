@@ -24,6 +24,9 @@ const AIAutomations = () => {
             KARA AI AUTOMATIONS AND TRAINING
           </h2>
           <p className="text-lg text-kara-brown">
+            <div className='flex justify-center py-10'>
+              <img src='karapic2.jpg' className='w-96 h-auto'/>
+            </div>
             CLICK ON THE IMAGE TO LEARN MORE
           </p>
         </div>

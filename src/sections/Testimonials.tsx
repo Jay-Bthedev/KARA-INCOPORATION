@@ -44,6 +44,9 @@ const Testimonials = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
+          <div className='flex justify-center py-10'>
+          <img src='/karapic4.jpg' className='rounded-full w-96 h-auto ' />
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-kara-dark mb-4">
             Client Testimonials
           </h2>
