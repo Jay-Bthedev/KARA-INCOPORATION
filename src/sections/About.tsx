@@ -64,13 +64,11 @@ const About = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-6">
                 <Target className="w-8 h-8 text-kara-tan" />
-                <h3 className="text-2xl font-bold">Mission</h3>
-                <span className="text-2xl">😎🎉🤎🤎</span>
+                <h3 className="text-2xl font-bold">Our Mission</h3>
+                <span className="text-2xl"></span>
               </div>
               <p className="text-white/90 leading-relaxed text-lg">
-                We empower learners globally by bridging knowledge and real-world application 
-                through accessible tech education, mentorship, and inclusive support—transforming 
-                potential into leadership and innovation.
+                To build practical technology that helps you unlock hidden potential and take consistent action.
               </p>
               <p className="mt-4 text-kara-tan font-medium">
                 It's all God speed!
@@ -84,13 +82,11 @@ const About = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-6">
                 <Rocket className="w-8 h-8 text-kara-dark" />
-                <h3 className="text-2xl font-bold">Vision</h3>
-                <span className="text-2xl">🚀🌍</span>
+                <h3 className="text-2xl font-bold">Our Vision</h3>
+                <span className="text-2xl"></span>
               </div>
               <p className="text-white/90 leading-relaxed text-lg">
-                To be the catalyst for a tech-driven future where every individual thrives 
-                as a compassionate, skilled leader, reshaping industries and communities 
-                through education and collaboration.
+              To create a generation of builders who execute boldly and live without limits.
               </p>
             </div>
           </div>

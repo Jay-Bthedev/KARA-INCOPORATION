@@ -165,7 +165,7 @@ const Blogs = () => {
                 PDF RESOURCES
               </h2>
               <p className="text-white/80 text-base md:text-lg italic px-2">
-                "...In a generation full of mediocre's just a little reading would set you apart" ✨🤎
+                "...In a generation full of mediocre's just a little reading would set you apart" 
               </p>
               <p className="text-kara-tan mt-2">~Kara</p>
             </div>

@@ -23,12 +23,23 @@ const AIAutomations = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-kara-dark mb-4">
             KARA AI AUTOMATIONS AND TRAINING
           </h2>
-          <p className="text-lg text-kara-brown">
+          <div className="text-lg text-kara-brown">
             <div className='flex justify-center py-10'>
-              <img src='karapic2.jpg' className='w-96 h-auto'/>
+              <a 
+                href="https://karacorp-ai-nbb687j.gamma.site/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-105 duration-300"
+              >
+                <img 
+                  src='karapic2.jpg' 
+                  className='w-96 h-auto cursor-pointer rounded-xl shadow-md' 
+                  alt="KARA AI Training"
+                />
+              </a>
             </div>
-            CLICK ON THE IMAGE TO LEARN MORE
-          </p>
+            <p className="font-medium tracking-wide">CLICK ON THE IMAGE TO LEARN MORE</p>
+          </div>
         </div>
 
         {/* Stats Banner */}
